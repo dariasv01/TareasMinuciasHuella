@@ -99,7 +99,9 @@ for i in range(imagen_eg.shape[0]-2):
 image_dos = np.zeros(size)
 
 imagen_eg = zhangSuen(imagen_eg)
-
+plt.imshow(imagen_eg)
+plt.show()
+plt.imsave('huellaDelgada.png', imagen_eg)
 img = Image.open('huellaDelgada.png')
 
 imageToMatrice = np.asarray(img)
@@ -122,8 +124,6 @@ for i in range(imagen_eg.shape[0]):
             posicion = 0
             seguidas = 0
             bolSeguidas = False
-            if j == 139 and i == 472:
-                print(f"aqui andamios: {countDos}")
             for item in vecinos:
                 if item == 1:
                     count += 1
