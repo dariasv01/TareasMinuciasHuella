@@ -143,7 +143,7 @@ for i in range(imagen_eg.shape[0]):
                 if (countDos != 4) :
                     bifurcaciones += 1
                     image_dos = pintarCuadrado(i, j, image_dos)
-            if count == 4 and bolSeguidas is True:
+            if count >= 4 and bolSeguidas is True:
                 if (countDos != 6) and (countDos != 7) and (countDos != 10) and (countDos != 4):
                     bifurcaciones += 1
                     image_dos = pintarCuadrado(i, j, image_dos)
